@@ -1,0 +1,36 @@
+
+<nav class ="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnavbar">
+<span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url '
+            music:index' %}">Raihan</a>
+        </div>
+    </div>
+</nav>
+
+
+{% if all_albums %}
+<h3> Here are all my Albums:</h3>
+<ul>
+    {% for album in all_albums %}
+    <li> <a href="{% url 'music:detail'album.id %}">{{album.album_title}}</a>
+    </li>
+    { % endfor % }
+</ul>
+  { % else % }
+<h3> you don't have any albums</h3>
+{ % endif % }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
